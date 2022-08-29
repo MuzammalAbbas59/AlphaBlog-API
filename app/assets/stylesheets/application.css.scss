@@ -1,0 +1,39 @@
+@import "bootstrap";
+
+.navbar {
+    background-color: black !important;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    color: rgb(204, 81, 81) !important;
+}
+.navbar-title{
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    font-size: 20px;
+    float: left;
+}
+#jmbotron{
+text-align: center;
+background-image: asset-url("bg1.jpg");
+background-position: center;
+background-size:cover;
+height: 475px;
+color: white;
+}
+body{
+    background-color: lightgray;
+}
+.footer{
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+    
+}

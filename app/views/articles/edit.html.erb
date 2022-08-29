@@ -1,0 +1,7 @@
+<h1>Edit new article</h1>
+
+<%= render 'form' %>
+
+<%= link_to'Created Articles',articles_path%>||
+<%= link_to 'Delete',articles_path, 
+data: {turbo_confirm:"Are You Sure ?", turbo_method: :delete }%></p>
