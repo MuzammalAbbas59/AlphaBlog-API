@@ -1,26 +1,33 @@
+<div class="container">
+  <%= render 'shared/errors'%>
+   <div class="row justify-content-center">
+     <div class="col-10">
+      <%= form_with(model: @article ,class:"shadow mb-5 p-3 bg-info rounded", local: true, data: { turbo: false })  do |f| %>
 
-<% if @article.errors.any? %>
-<h2>Article cannot be saved</h2>
-<ul>
-   <% @article.errors.full_messages.each do |m| %>
-    <li> <%= m %></li>
-   <% end %>
-</ul>
-   <% end %>
-<%= form_with(model: @article , local: true, data: { turbo: false })  do |f| %>
+         <div class="form-group row">
+             <%= f.label :title , class:"col-2 col-form-label text-light"%><br/>
+             <div class="col-10">
+               <%= f.text_field :title, class:"form-control shadow rounded",placeholder:"Title of article"%>
+            </div>
+         </div>
 
-<p>
-<%= f.label :title%><br/>
-<%= f.text_field :title%>
-</p>
+         <div class="form-group row mt-2">
+            <%= f.label :description , class:"col-2  col-form-label text-light"%><br/>
+            <div class="col-10">
+               <%= f.text_area :description,rows:10 , class:"form-control shadow rounded", placeholder:"Description of article" %>
+            </div>
+         </div>
 
-<p>
-<%= f.label :description %><br/>
-<%= f.text_area :description %>
-</p>
+         <div class="form-group row mt-4 justify-content-center">
+         <div class="col-2">
+           <%= f.submit class:"btn btn-outline-light btn-lg" %>
+           </div>
+         </div>
+     <% end %>
+   </div>
+      <div class="row text-center">
+    <%= link_to '[Back to List of Articles]',articles_path , class:"text-success"%>
 
-<p>
-<%= f.submit %>
-</p>
-
-<% end %>
+         </div>
+</div>
+ </div>
