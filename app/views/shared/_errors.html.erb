@@ -1,11 +1,11 @@
-<% if @article.errors.any? %>
+<% if obj.errors.any? %>
   <div class= "container">
     <div class="row justify-content-center">
       <div class="col-10">
          <div class="alert alert-danger rounded alert-dismissible fade show" role="alert">
-             <h4 class="alert-heading">Error!,Article cannot be saved</h4>
+             <h4 class="alert-heading">Following errors prevented the <%=obj.class.name.downcase%> from saving</h4>
              <ul>
-                <% @article.errors.full_messages.each do |m| %>
+                <% obj.errors.full_messages.each do |m| %>
                 <li> <%= m %></li>
                  <% end %>
               </ul>
