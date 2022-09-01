@@ -10444,3 +10444,596 @@ Completed 200 OK in 19ms (Views: 18.4ms | Allocations: 9228)
   [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Started GET "/users/3/edit" for ::1 at 2022-09-01 20:25:53 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 249)
+  Rendered users/_form.html.erb (Duration: 10.5ms | Allocations: 4670)
+  Rendered users/edit.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5189)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 360)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 92.8ms | Allocations: 49707)
+Completed 200 OK in 115ms (Views: 95.6ms | ActiveRecord: 0.7ms | Allocations: 64841)
+
+
+Started GET "/users/3" for ::1 at 2022-09-01 20:25:57 +0500
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/3" for ::1 at 2022-09-01 20:26:42 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+Completed 406 Not Acceptable in 14ms (ActiveRecord: 1.4ms | Allocations: 5635)
+
+
+  
+ActionController::MissingExactTemplate (UsersController#show is missing a template for request formats: text/html):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/3" for ::1 at 2022-09-01 20:27:40 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 110)
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 385)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 18667)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.1ms | Allocations: 20169)
+
+
+Started GET "/users/3" for ::1 at 2022-09-01 20:29:34 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 149)
+  Rendered layouts/_navigation.html.erb (Duration: 1.4ms | Allocations: 382)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 7318)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 8795)
+
+
+Started GET "/users/3" for ::1 at 2022-09-01 20:29:50 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 144)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 382)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7315)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.1ms | Allocations: 8803)
+
+
+Started GET "/users/9" for ::1 at 2022-09-01 20:30:10 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 17)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 139)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6164)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 6940)
+
+
+Started GET "/users/9" for ::1 at 2022-09-01 20:39:18 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4130)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms | Allocations: 6106)
+
+
+  
+ActionView::Template::Error (undefined method `gravatar_for' for #<ActionView::Base:0x00000000011df0>):
+    1: <h1 class="text-center mt-3"><%=@user.username%>'s Profile</h1>
+    2: 
+    3: <%= gravatar_for @user%>
+  
+app/views/users/show.html.erb:3
+Started GET "/users/9" for ::1 at 2022-09-01 20:45:02 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 34)
+  Rendered layouts/_navigation.html.erb (Duration: 1.5ms | Allocations: 388)
+  Rendered layouts/_messages.html.erb (Duration: 1.2ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 18595)
+Completed 200 OK in 44ms (Views: 33.2ms | ActiveRecord: 0.8ms | Allocations: 24030)
+
+
+Started GET "/users/9" for ::1 at 2022-09-01 20:45:43 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 164)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 17571)
+Completed 200 OK in 37ms (Views: 24.1ms | ActiveRecord: 1.8ms | Allocations: 23370)
+
+
+Started GET "/users/9" for ::1 at 2022-09-01 20:46:13 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 17502)
+Completed 200 OK in 30ms (Views: 19.9ms | ActiveRecord: 1.0ms | Allocations: 23277)
+
+
+Started GET "/users/9" for ::1 at 2022-09-01 20:48:49 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 164)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 17690)
+Completed 200 OK in 38ms (Views: 20.7ms | ActiveRecord: 1.5ms | Allocations: 23489)
+
+
+Started GET "/users/9s=200" for ::1 at 2022-09-01 20:49:01 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9s=200"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 139)
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 6192)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 6967)
+
+
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:49:09 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 6199)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 6974)
+
+
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:50:22 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1132)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms | Allocations: 7159)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: <h1 class="text-center mt-3"><%=@user.username%>'s Profile</h1>
+    2: 
+    3: <%= gravatar_for @user ,size=200%>
+  
+app/helpers/application_helper.rb:6:in `[]'
+app/helpers/application_helper.rb:6:in `gravatar_for'
+app/views/users/show.html.erb:3
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:50:34 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 207)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 385)
+  Rendered layouts/_messages.html.erb (Duration: 0.7ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 18756)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.1ms | Allocations: 20231)
+
+
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:52:24 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 17517)
+Completed 200 OK in 33ms (Views: 19.7ms | ActiveRecord: 2.3ms | Allocations: 23360)
+
+
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:52:40 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 86)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 17739)
+Completed 200 OK in 36ms (Views: 19.8ms | ActiveRecord: 1.1ms | Allocations: 23532)
+
+
+Started GET "/users/9?s=200" for ::1 at 2022-09-01 20:54:36 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 68)
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6316)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 7091)
+
+
+Started GET "/users/3?s=200" for ::1 at 2022-09-01 20:54:41 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 139)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6204)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 6979)
+
+
+Started GET "/users/3?s=200" for ::1 at 2022-09-01 21:03:40 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"s"=>"200", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 255)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 382)
+  Rendered layouts/_messages.html.erb (Duration: 0.4ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7434)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 9424)
+
+
+Started GET "/articles" for ::1 at 2022-09-01 21:03:44 +0500
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:10
+  Rendered articles/_article.html.erb (Duration: 16.9ms | Allocations: 9698)
+  Rendered articles/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 9955)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 16180)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 1.1ms | Allocations: 19090)
+
+
+Started GET "/articles" for ::1 at 2022-09-01 21:04:03 +0500
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 3.7ms | Allocations: 1951)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2209)
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 352)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 9338)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.2ms | Allocations: 10370)
+
+
+Started GET "/articles" for ::1 at 2022-09-01 21:05:32 +0500
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 3.7ms | Allocations: 1950)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2208)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 352)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 9353)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.2ms | Allocations: 10386)
+
+
+Started GET "/users/3/edit" for ::1 at 2022-09-01 21:05:39 +0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 237)
+  Rendered users/_form.html.erb (Duration: 11.1ms | Allocations: 2159)
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2414)
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 8557)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.1ms | Allocations: 9857)
+
+
+Started GET "/users/3" for ::1 at 2022-09-01 21:05:43 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered articles/_article.html.erb (Duration: 1.1ms | Allocations: 1532)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1934)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2734)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: 
+    2: <div class="container ">
+    3: <% @articles.each do |article| %>
+    4: <div class="row justify-content-md-center">
+    5: <div class="col-8 mt-4 ">
+    6: 
+  
+app/views/articles/_article.html.erb:3
+app/views/users/show.html.erb:7
+Started GET "/users/3" for ::1 at 2022-09-01 21:09:09 +0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/articles/_article.html.erb:3
+  Rendered articles/_article.html.erb (Duration: 4.4ms | Allocations: 2299)
+  Rendered users/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 7596)
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 352)
+  Rendered layouts/_messages.html.erb (Duration: 0.5ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 14834)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.3ms | Allocations: 16309)
+
+
+Started GET "/articles" for ::1 at 2022-09-01 21:09:16 +0500
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/_article.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/_article.html.erb:9
+  Rendered articles/_article.html.erb (Duration: 5.4ms | Allocations: 1592)
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1796)
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered layouts/_messages.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 8015)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 8873)
+
+
