@@ -1,0 +1,36 @@
+
+<div class="container ">
+<% User.all.each do |user| %>
+<div class="row justify-content-md-center">
+<div class="col-8 mt-4 ">
+
+<div class="card text-center shadow mb-5 bg-white rounded">
+  <div class="card-header font-italic">
+    <%=link_to user.username,user_path(user)%>
+  </div>
+  <div class="card-body">
+    <%=link_to gravatar_for(user,size:150),user_path(user),class:"card-title"%>
+    <p class="card-text"><%=pluralize(user.articles.count,'article') %></p>
+    <%=link_to "View",user_path(user),class:"btn btn-outline-success" %>
+    <%=link_to "Edit",edit_user_path(user),class:"btn btn-outline-warning" %>
+    <%# <%= link_to 'Delete',user_path(user),class:"btn btn-outline-danger",
+    data: {turbo_confirm:"Are You Sure ?", turbo_method: :delete }%>
+  </div>
+  <div class="card-footer text-muted">
+ <small>Joined<%=time_ago_in_words( user.created_at )%> ago, 
+ Last edited<%= time_ago_in_words(user.updated_at )%> ago</small>
+  </div>
+
+</div>
+
+</div>
+
+<div class="row  mt-2 mb-3 text-center">
+      
+<%= link_to '[Create a New Article]',new_article_path , class:"text-success "%>
+
+</div>
+
+</div>
+<% end %>
+   </div>
