@@ -12,9 +12,11 @@
     <%=link_to gravatar_for(user,size:150),user_path(user),class:"card-title"%>
     <p class="card-text"><%=pluralize(user.articles.count,'article') %></p>
     <%=link_to "View",user_path(user),class:"btn btn-outline-success" %>
+     <% if loggedin? && current_user == user %>
     <%=link_to "Edit",edit_user_path(user),class:"btn btn-outline-warning" %>
     <%# <%= link_to 'Delete',user_path(user),class:"btn btn-outline-danger",
     data: {turbo_confirm:"Are You Sure ?", turbo_method: :delete }%>
+    <%end%>
   </div>
   <div class="card-footer text-muted">
  <small>Joined<%=time_ago_in_words( user.created_at )%> ago, 
