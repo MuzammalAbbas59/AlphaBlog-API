@@ -37,13 +37,18 @@
         <% else %> 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <%= current_user.username %>
+            <%= "(admin)" if current_user.admin? %> <%=current_user.username %>
+            
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><%= link_to "View Profile", user_path(current_user), class: "dropdown-item" %></li>
             <li><%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item" %></li> 
-            <li><hr class="dropdown-divider"></li>
-          </ul>
+            <li><%= link_to "Delete Profile", user_path(current_user),
+                            class: "dropdown-item text-danger",
+                            data: { turbo_confirm: "Are You Sure ?",
+                                    turbo_method: :delete } %></li>   
+        
+                   </ul>
         </li>
         <li class="nav-item">
           <li><%= link_to "Log out", logout_path, class: "nav-link",

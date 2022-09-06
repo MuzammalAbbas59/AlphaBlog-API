@@ -11,7 +11,7 @@
   </div>
   <div class="card-body">
     <div class="card-text"><%= simple_format(@article.description) %></div>
-    <% if loggedin? && current_user == @article.user %>
+    <% if loggedin? && (current_user == @article.user || current_user.admin?) %>
     <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-warning" %>
     <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger",
                                             data: { turbo_confirm: "Are You Sure ?", turbo_method: :delete } %>

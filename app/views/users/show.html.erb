@@ -2,7 +2,7 @@
 
 <%= gravatar_for @user ,size:200%>
 <div class="text-center mt-4 ">
- <% if loggedin? && current_user == @user %>
+ <% if loggedin? && (current_user == @user ||current_user.admin?)%>
  <%=link_to "Edit Profile ",edit_user_path(@user),class:"btn btn-outline-success " %>
  </div>
  <%end%>  
