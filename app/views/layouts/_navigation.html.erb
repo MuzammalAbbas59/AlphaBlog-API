@@ -27,6 +27,24 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><%= link_to "List of Categories", categories_path, class: "dropdown-item" %></li>
+              <% if (loggedin? && current_user.admin? )%>
+            <li><%= link_to "Create new Category", new_category_path, class: "dropdown-item" %></li>
+            <% end %>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+
+
+
+
         <% if !loggedin? %>
         <li class="nav-item">
           <li><%= link_to "Log in", login_path, class: "nav-link" %></li>   
