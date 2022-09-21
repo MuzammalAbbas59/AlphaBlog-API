@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'about', to:'pages#about'
   get 'signup', to:'users#new'  
   resources :users, except: [:new]
-  resources :categories, except: [:destroy]
+  resources :categories
+  # , except: [:destroy]
 
   get 'login', to:'sessions#new'  
   post 'login', to:'sessions#create'  
