@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user, :loggedin?
-
+  protect_from_forgery unless: -> { request.format.json? }
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def loggedin?
     !!current_user
   end
-
+  
   def require_user
     if !loggedin?
       render json:{message:"You must be login to perform this action"}

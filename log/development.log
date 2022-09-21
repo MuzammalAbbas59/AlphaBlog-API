@@ -37965,3 +37965,942 @@ puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.4) lib/puma/server.rb:441:in `process_client'
 puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-09-21 17:50:08 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/deltalabs/alpha-blog/app/controllers/authentication_controller.rb:23: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/authentication_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:23: syntax error, unexpected `end', expecting end-of-input
+Started POST "/login" for 127.0.0.1 at 2022-09-21 17:50:57 +0500
+  
+SyntaxError (/home/deltalabs/alpha-blog/app/controllers/application_controller.rb:37: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:37: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started POST "/login" for 127.0.0.1 at 2022-09-21 17:51:39 +0500
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 539)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-09-21 17:54:43 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 5ms (Views: 0.3ms | Allocations: 2831)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 17:54:52 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 320)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 17:54:55 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 318)
+
+
+Started PUT "/users/17" for 127.0.0.1 at 2022-09-21 17:55:12 +0500
+Processing by UsersController#update as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "id"=>"17"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Filter chain halted as :require_user rendered or redirected
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 12387)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 18:23:20 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "koko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 281ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 1469)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 18:23:47 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 335)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 18:24:07 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 458)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-09-21 18:24:42 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 537)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-09-21 18:26:06 +0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "koko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 287ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 12800)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-21 18:28:01 +0500
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:17:in `index'
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 1.7ms | Allocations: 6884)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:41:48 +0500
+Processing by PagesController#home as */*
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 556)
+  Rendered layouts/_navigation.html.erb (Duration: 5.2ms | Allocations: 1020)
+  Rendered layouts/_messages.html.erb (Duration: 0.9ms | Allocations: 257)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | Allocations: 46054)
+Completed 200 OK in 113ms (Views: 109.5ms | Allocations: 48979)
+
+
+Started GET "/login" for ::1 at 2022-09-21 18:43:30 +0500
+Processing by SessionsController#new as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 187)
+
+
+Started GET "/login" for ::1 at 2022-09-21 18:43:30 +0500
+Processing by SessionsController#new as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 172)
+
+
+Started GET "/login" for ::1 at 2022-09-21 18:43:43 +0500
+Processing by SessionsController#new as */*
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 178)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:44:53 +0500
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 68)
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 269)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6351)
+Completed 200 OK in 15ms (Views: 14.3ms | Allocations: 6681)
+
+
+Started GET "/articles" for ::1 at 2022-09-21 18:45:01 +0500
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/articles_controller.rb:18:in `index'
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:18:in `index'
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 1.8ms | Allocations: 10367)
+
+
+Started GET "/articles" for ::1 at 2022-09-21 18:45:01 +0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:18:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2378)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-21 19:02:05 +0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:17:in `index'
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 13041)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-09-21 19:02:11 +0500
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 10737)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-09-21 19:02:35 +0500
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Completed 200 OK in 24ms (Views: 0.7ms | ActiveRecord: 1.8ms | Allocations: 10229)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-09-21 19:02:39 +0500
+Processing by UsersController#show as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 1177)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:02:58 +0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 539)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:06:30 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 2809)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:06:47 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "koko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 286ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 10920)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-09-21 19:07:49 +0500
+Processing by UsersController#index as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:17:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2562)
+
+
+Started POST "/articles" for 127.0.0.1 at 2022-09-21 19:08:30 +0500
+Processing by ArticlesController#create as */*
+  Parameters: {"description"=>"afridi is afridi and afridi khan", "title"=>"afridi khan"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms | Allocations: 496)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.3.1) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/articles" for 127.0.0.1 at 2022-09-21 19:34:02 +0500
+Processing by ArticlesController#create as */*
+  Parameters: {"description"=>"afridi is afridi and afridi khan", "title"=>"afridi khan"}
+Can't verify CSRF token authenticity.
+Filter chain halted as :require_user rendered or redirected
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 356)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:34:24 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"koko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "koko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 284ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 4712)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:35:20 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"lolo@gmail.com", "password"=>"[FILTERED]", "username"=>"lolo"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "lolo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "lolo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "lolo"], ["email", "lolo@gmail.com"], ["created_at", "2022-09-21 14:35:21.091007"], ["updated_at", "2022-09-21 14:35:21.091007"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 291ms (Views: 0.4ms | ActiveRecord: 15.6ms | Allocations: 5483)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:37:07 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"coco@gmail.com", "password"=>"[FILTERED]", "username"=>"coco"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "coco"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "coco@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "coco"], ["email", "coco@gmail.com"], ["created_at", "2022-09-21 14:37:07.340628"], ["updated_at", "2022-09-21 14:37:07.340628"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 289ms (Views: 0.4ms | ActiveRecord: 6.4ms | Allocations: 8341)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:38:01 +0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"coco@gmail.com", "password"=>"[FILTERED]", "username"=>"coco"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "coco"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "coco@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 289ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 15997)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:38:22 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"ioio@gmail.com", "password"=>"[FILTERED]", "username"=>"ioio"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "ioio"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ioio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "ioio"], ["email", "ioio@gmail.com"], ["created_at", "2022-09-21 14:38:23.161982"], ["updated_at", "2022-09-21 14:38:23.161982"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 286ms (Views: 0.5ms | ActiveRecord: 9.2ms | Allocations: 4879)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:40:12 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"ioo@gmail.com", "password"=>"[FILTERED]", "username"=>"ioo"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "ioo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ioo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 293ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 7898)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:40:17 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"ioo@gmail.com", "password"=>"[FILTERED]", "username"=>"ioop"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "ioop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ioo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "ioop"], ["email", "ioo@gmail.com"], ["created_at", "2022-09-21 14:40:18.236569"], ["updated_at", "2022-09-21 14:40:18.236569"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 294ms (Views: 0.8ms | ActiveRecord: 9.5ms | Allocations: 3630)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:40:50 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"ioo@gmail.com", "password"=>"[FILTERED]", "username"=>"ioop"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ioo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 277ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1004)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:41:05 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"ioo@gmail.com", "password"=>"[FILTERED]", "username"=>"ioop"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "ioop"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ioo@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 282ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 3251)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:41:27 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"kko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkoo"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "kkoo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "kko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "kkoo"], ["email", "kko@gmail.com"], ["created_at", "2022-09-21 14:41:27.936191"], ["updated_at", "2022-09-21 14:41:27.936191"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 291ms (Views: 0.5ms | ActiveRecord: 10.6ms | Allocations: 3561)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:43:12 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkoo"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 277ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 5120)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:43:26 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"kko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkoo"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "kkoo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "kko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `create'
+Completed 200 OK in 271ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3692)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-09-21 19:43:44 +0500
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkko"}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "kkko"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "kkko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "password_digest", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "kkko"], ["email", "kkko@gmail.com"], ["created_at", "2022-09-21 14:43:44.992209"], ["updated_at", "2022-09-21 14:43:44.992209"], ["password_digest", "[FILTERED]"], ["admin", 0]]
+  ↳ app/controllers/users_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:31:in `create'
+Completed 200 OK in 301ms (Views: 0.5ms | ActiveRecord: 9.6ms | Allocations: 3631)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:44:33 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkko"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kkko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 281ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 5124)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:44:55 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkko"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 219)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:45:44 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkko"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 219)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-09-21 19:45:55 +0500
+Processing by SessionsController#new as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]", "username"=>"kkko"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:46:07 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kkko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 275ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 697)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:46:19 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:50:45 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kkko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 275ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 5182)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:50:51 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kkko@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12:in `create'
+Completed 200 OK in 279ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 696)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:51:03 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 219)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-09-21 19:52:29 +0500
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 16618ms (Views: 0.2ms | Allocations: 108067)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:53:02 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 366)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-09-21 19:53:07 +0500
+Processing by SessionsController#destroy as */*
+  Parameters: {"email"=>"kkko@gmail.com", "password"=>"[FILTERED]"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 326)
+
+

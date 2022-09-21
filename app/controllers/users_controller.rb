@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show, :destroy]
   before_action :require_user, except: [:show, :index,:create ,:new]
   before_action :require_same_user, only: [:edit, :update,:destroy]
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   def show
     @articles = @user.articles
@@ -26,15 +26,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      render json: @user
-      session[:user_id] = @user.id
-      #flash[:notice] = "Dear #{@user.username}, Welcome to alpha blog"
-      #redirect_to articles_path
-    else
-      render json: { message: " could not create" }
-    end
+      @user = User.new(user_params)
+      if @user.save
+        render json: @user
+        session[:user_id] = @user.id
+        #flash[:notice] = "Dear #{@user.username}, Welcome to alpha blog"
+        #redirect_to articles_path
+      else
+        render json: { message: " could not create" }
+      end
   end
 
   def update
