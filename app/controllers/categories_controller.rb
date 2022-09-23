@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update,:destroy]
-  before_action :require_user, except: [:show, :index]
-  before_action :require_admin, except: [:index, :show,:edit]
-  # skip_before_action :verify_authenticity_token
+  # before_action :require_user, except: [:show, :index]
+  # before_action :require_admin, except: [:index, :show,:edit]
+   skip_before_action :verify_authenticity_token
 
   def new
     @category = Category.new
@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
 
   def update
       if @category.update(category_params)
-      render json: { message: "#{current_user.id}" }
+      render json: { message: "Category Updated" }
 
       #   flash[:notice] = "updated successfully"
       #   redirect_to category_path(@category)
@@ -44,11 +44,14 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
+    debugger
     if @category.save
       # flash[:notice] = "created successfully"
       # redirect_to @category
+      debugger
       render json: { message: " created " }
     else
+      debugger
       render json: { message: " could not create" }
       # render "new"
     end

@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, except: [:show, :index]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
-  # skip_before_action :verify_authenticity_token
+  # before_action :require_user, except: [:show, :index]
+#  before_action :require_same_user, only: [:edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def show
     if @article
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   #   @article.title=params[:title]
   #   @article.description=params[:description]
   #  # @article.category_ids[]=params[:category_ids=>[]]
-    @article.user = current_user
+    @article.user = User.last
     # render json:@article,status: :created
     debugger
     if @article.save
